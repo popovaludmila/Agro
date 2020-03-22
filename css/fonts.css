@@ -1,0 +1,16 @@
+ @font-face {
+     font-family: "Storytella";
+     src: url("../fonts/Storytella/Storytella.eot") format("eot"),
+         url("../fonts/Storytella/Storytella.woff") format("woff"),
+         url("../fonts/Storytella/Storytella.ttf") format("truetype"),
+         url("../fonts/Storytella/Storytella.svg") format("svg");
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: "Gilroy";
+     src: url("../fonts/gilroy/Gilroyextrabold.woff") format("woff"),
+         url("../fonts/gilroy/Gilroyextrabold.ttf") format("truetype"),
+         url("../fonts/gilroy/Gilroyextrabold.woff2") format("woff2");
+ }
