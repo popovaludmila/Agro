@@ -482,12 +482,16 @@ body {
 
 .banner {
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    min-height: 684px;
+    background-size: auto, cover;
+    background-position: 77% 33px, center;
     background-repeat: no-repeat;
-    background-image: url(/img/banner-bcg.jpg);
+    background-image: url(../img/banner-icon.png),
+    url(../img/banner-bcg.jpg);
 }
 
 .main-title-yellow {
-    color: #
+    color: #d8bb90;
+    line-height: 0.8;
+    padding-top: 125px;
 }
