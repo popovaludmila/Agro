@@ -226,8 +226,8 @@ body {
     flex-direction: row-reverse;
 
     background-image: url(../img/slogan-pic.jpg),
-    url(../img/slogan-bcg.jpg);
-    background-position:  430px 42px, 0 78px;
+        url(../img/slogan-bcg.jpg);
+    background-position: 430px 42px, 0 78px;
     background-repeat: no-repeat;
 }
 
@@ -267,12 +267,21 @@ body {
 .services-inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 90px;
+    margin-top: 145px;
+    flex-wrap: wrap;
 }
 
-.service-list{
+.service-header {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.service-list {
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .subtitle {
@@ -281,4 +290,9 @@ body {
     font-size: 18px;
     line-height: 25px;
     color: #b3b3b3;
+    padding-top: 10px;
+}
+
+.service-list li{
+    width: calc(100%/6);
 }
