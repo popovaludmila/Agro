@@ -18,8 +18,8 @@ a {
 body {
     width: 100%;
     max-width: 1600px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
     color: #c5c5c5;
     font-weight: 400;
     margin: 0 auto;
@@ -580,7 +580,71 @@ body {
     opacity: 0;
 }
 
-.pic-item:hover .pic-text{
+.pic-item:hover .pic-text {
     opacity: 1;
 }
-  
+
+.review-header {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.review {
+    background-image: url(../img/review-bcg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.review-inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 130px;
+    padding-bottom: 150px;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 30px;
+    position: relative;
+    padding-left: 90px;
+
+}
+
+.review-text::before {
+    content: '“';
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    font-weight: 700;
+    font-style: italic;
+    color: #fcdb5a;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.subtitle-white {
+    color: #ffffff;
+}
+
+.review-author {
+    display: flex;
+    padding-left: 90px;
+    color: #ffffff;
+}
+
+.review-name {
+    font-weight: 700;
+    padding-left: 15px;
+}
