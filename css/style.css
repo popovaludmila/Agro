@@ -16,7 +16,8 @@ a {
 }
 
 body {
-
+    width: 100%;
+    max-width: 1600px;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #c5c5c5;
@@ -487,7 +488,7 @@ body {
     background-position: 77% 33px, center;
     background-repeat: no-repeat;
     background-image: url(../img/banner-icon.png),
-    url(../img/banner-bcg.jpg);
+        url(../img/banner-bcg.jpg);
 }
 
 .main-title-yellow {
@@ -512,7 +513,7 @@ body {
 
 .progress-list {
     display: flex;
-   justify-self: end;
+    justify-self: end;
 }
 
 .progress-list li {
@@ -536,9 +537,50 @@ body {
 
 .progress-item {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .progress-text {
-    width: 100%;
     padding-left: 20px;
 }
+
+.pic-product {
+    width: 100%;
+}
+
+.pic-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pic-item {
+    width: calc(100%/4);
+    height: 370px;
+    position: relative;
+}
+
+.pic-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 700;
+    background-color: rgb(36, 22, 16, 0.7);
+    opacity: 0;
+}
+
+.pic-item:hover .pic-text{
+    opacity: 1;
+}
+  
