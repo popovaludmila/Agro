@@ -166,7 +166,7 @@ body {
 
 .menu-four {
     width: 384px;
-   
+
 }
 
 .menu-bottom {
@@ -196,7 +196,7 @@ body {
 
 }
 
-.menu-text span{
+.menu-text span {
     font-weight: 900;
 }
 
@@ -206,6 +206,7 @@ body {
     line-height: 50px;
     font-weight: 100;
     text-transform: uppercase;
+    color: #333333;
 }
 
 .title span {
@@ -220,18 +221,64 @@ body {
 }
 
 .slogan-inner {
-    padding-top: 50px;
+    display: flex;
     position: relative;
+    flex-direction: row-reverse;
 
+    background-image: url(../img/slogan-pic.jpg),
+    url(../img/slogan-bcg.jpg);
+    background-position:  430px 42px, 0 78px;
+    background-repeat: no-repeat;
+}
+
+.slogan-content {
+    display: inline-block;
+    width: 515px;
+    padding-top: 75px;
+    padding-bottom: 70px;
 }
 
 
-.slogan-pic {
-    position: absolute;
-    bottom: 35px;
-    right: 50%;
-    z-index: 2;
-    margin-left: 115px;
+.slogan-text {
+    font-size: 100px;
+    font-family: "Storytella";
+    line-height: 1;
+    font-weight: 400;
+    color: #72aa41;
+    padding-top: 30px;
 }
 
+.light-yellow {
+    color: #fcdb5a;
+}
 
+.violet {
+    color: #db2985;
+}
+
+.yellow {
+    color: #f2a137;
+}
+
+.blue {
+    color: #4fb1c9;
+}
+
+.services-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.service-list{
+    display: flex;
+}
+
+.subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #b3b3b3;
+}
