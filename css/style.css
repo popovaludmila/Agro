@@ -929,9 +929,18 @@ body {
 
 .map {
     display: block;
+    width: 615px;
     height: 503px;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 2;
+}
+
+.marker {
+    display: block;
+    position: absolute;
+    top: 210px;
+    right: 240px;
+    z-index: 3;
 }
