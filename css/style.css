@@ -39,7 +39,8 @@ body {
 .blog-posts,
 .partners-list,
 .footer-list,
-.footer-menu {
+.footer-menu,
+.social-list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -664,7 +665,7 @@ body {
 .blog-inner {
     display: flex;
     flex-direction: column;
-flex-wrap: wrap;
+    flex-wrap: wrap;
 
     padding-top: 130px;
     padding-bottom: 80px;
@@ -751,5 +752,146 @@ flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 2;
+}
+
+.footer {
+    background-color: #2e2e2e;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 503px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.footer-content {
+    width: 61%;
+    height: auto;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   padding-top: 75px;
+   padding-right: 100px;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-menu,
+.footer-list {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    margin-left: 140px;
+}
+
+.footer-menu a,
+.footer-list a {
+    text-decoration: none;
+    color: #aaaaaa;
+    padding-bottom: 3px;
+}
+
+.footer-menu li,
+.footer-list li {
+    margin-bottom: 3px;
+}
+
+.footer-menu li:hover a,
+.footer-list li:hover a {
+    color: #ffffff;
+    border-bottom: 1px solid #fcdb5a;
+}
+
+.footer-list {
+    margin-left: 80px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 65px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #414141;
+}
+
+.footer-contacts p {
+    margin: 0;
+}
+
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 120px;
+}
+
+.email,
+.phone {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    color: #fde557;
+    font-weight: 700;  
+    text-transform: uppercase;
+    line-height: 23px;
+}
+
+.phone-link a,
+.email-link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.phone {
+    margin-left: 55px;
+}
+
+.phone-one {
+    padding-right: 5px;
+}
+
+.social-icon {
+    padding-right: 5px;
+}
+
+.social-item {
+    margin-right: 10px;
+}
+
+.social-item:hover path {
+    fill: #ffffff;
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #7e7e7e;
+}
+
+.map {
+    display: block;
+    height: 503px;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 2;
 }
