@@ -673,11 +673,15 @@ flex-wrap: wrap;
 .blog-posts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .blog-post {
     position: relative;
+    padding-right: 30px;
+}
+
+.blog-posts li:last-child {
+    padding-right: 0;
 }
 
 .blog-date {
@@ -736,4 +740,16 @@ flex-wrap: wrap;
 
 .blog-text p {
     margin: 0;
+}
+
+.partners-inner {
+    padding-bottom: 90px;
+}
+
+.partners-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
 }
