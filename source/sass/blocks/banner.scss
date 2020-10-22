@@ -1,0 +1,27 @@
+.banner {
+    min-height: 684px;
+    background-size: auto, cover;
+    background-position: 77% 33px, 100% 0;
+    background-repeat: no-repeat;
+    background-image: url(../img/banner-icon.png),
+        url(../img/banner-bcg.jpg);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        padding-top: 125px;
+        @include main-title();
+        line-height: 0.8;
+        color: $brown-color;
+    }
+}
+
+@media (max-width: $middle-width) {
+    .banner {
+        @include visually-hidden();
+    }
+}

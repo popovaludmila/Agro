@@ -1,0 +1,85 @@
+.slogan {
+
+    &__inner {
+        display: flex;
+        position: relative;
+        flex-direction: row-reverse;
+
+        background-image: url(../img/slogan-bcg.jpg);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 720px auto;
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 330px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 36px;
+            background-image: url(../img/slogan-pic.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+    }
+
+    &__content {
+        width: 515px;
+        margin-left: auto;
+        padding-top: 25px;
+        padding-bottom: 80px;
+        z-index: 2;
+    }
+
+    &__title {
+        @include main-title();
+        font-size: 100px;
+        text-transform: none;
+        color: $green-color;
+
+        &--yellow {
+            color: $yellow-color;
+        }
+
+        &--pink {
+            color: $pink-color;
+        }
+
+        &--orange {
+            color: $orange-color;
+        }
+
+        &--blue {
+            color: $blue-color;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .slogan {
+        &__inner {
+            background-image: none;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .slogan {
+        &__inner{
+            &::after {
+                bottom: 0;
+            }
+        }
+        &__content {
+            padding-top: 80px;
+        }
+        &__title {
+            font-size: 70px;
+            text-align: center;
+        }
+    }
+}

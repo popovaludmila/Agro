@@ -1,0 +1,61 @@
+.features {
+    background-image: url("../img/feature-bcg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__inner {
+        position: relative;
+        padding-top: 135px;
+        padding-bottom: 220px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 540px;
+        text-align: left;
+        color: $light-color;
+    }
+
+    &__header {
+        max-width: 300px;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        @include title();
+
+        & span {
+            font-weight: 900;
+        }
+    }
+
+    &__text {
+        @include text();
+    }
+
+    &__link {
+        @include button();
+        margin-top: 32px;
+        width: 159px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color:$yellow-color;
+        border: 1px solid $yellow-color;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .features{
+        &__inner {
+            padding-top: 80px;
+        }
+    }
+}

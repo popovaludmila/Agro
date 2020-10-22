@@ -1,0 +1,34 @@
+.social {
+    align-self: flex-end;
+
+    &__list {
+        @include list();
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding-right: 5px;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover .social__icon path {
+            fill: $light-color;
+        }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .social {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: $middle-width) {
+    .social {
+        align-self: flex-end;
+    }
+}

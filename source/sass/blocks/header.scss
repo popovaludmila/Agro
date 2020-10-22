@@ -1,0 +1,92 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    border-bottom: 1px solid $light-color;
+
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 200;
+    }
+
+    &__button {
+        @include button();
+        width: 153px;
+        color: $dark-color;
+        font-family: "Raleway", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 22px;
+        background-color: $light-color;
+        transition: background-color linear 0.2s;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+@media (max-width: $middle-width) {
+    .header {
+        background-color: rgba(0, 0, 0, 0.4);
+
+        &__inner {
+            align-items: flex-start;
+        }
+
+        &__logo {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__button {
+            margin-top: 30px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .header {
+        background-color: rgba(0, 0, 0, 0.9);
+
+        &__logo-icon {
+            width: 80px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .header {
+
+        &__inner {
+            justify-content: flex-end;
+        }
+
+        &__logo {
+            left: 0;
+            transform: translateX(0);
+        }
+
+        &__button {
+            @include visually-hidden();
+        }
+    }
+}

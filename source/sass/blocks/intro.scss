@@ -1,0 +1,62 @@
+.intro {
+    position: relative;
+    min-height: 1631px;
+    background-image: url("../img/intro-bsckground.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        position: relative;
+        @include title();
+        padding-top: 300px;
+        font-family: "Storytella";
+        font-size: 200px;
+        line-height: 1;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $light-color;
+    }
+
+    &__menu {
+        position: absolute;
+        max-width: 1380px;
+        width: 100%;
+        margin: 0 auto;
+        bottom: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: $middle-width) {
+    .intro {
+        min-height: 1400px;
+
+        &__title {
+            padding-top: 250px;
+            font-size: 150px;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .intro {
+        &__title {
+            font-size: 120px;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .intro {
+        &__menu {
+            bottom: 50px;
+        }
+
+        &__title {
+            padding-top: 170px;
+            font-size: 100px;
+        }
+    }
+}

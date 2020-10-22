@@ -1,0 +1,19 @@
+.slider {
+    &__toggle {
+        width: 12px;
+        height: 12px;
+        border: 1px solid $add-light-color;
+        border-radius: 50%;
+        background-color: transparent;
+        margin-right: 15px;
+        padding: 0;
+        cursor: pointer;
+        transition: all linear 0.2s;
+
+        &--current,
+        &:hover {
+            background-color: $yellow-color;
+            transform: scale(1.1);
+        }
+    }
+}

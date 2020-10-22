@@ -1,0 +1,146 @@
+.about {
+    min-height: 473px;
+    background-color: $bg-light-color;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__list {
+        position: absolute;
+        bottom: -315px;
+        left: 0;
+        z-index: 1;
+        @include list();
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        top: -110px;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    &__img {
+        width: 50%;
+        min-height: 220px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &--one {
+            background-image: url("../img/feature1.jpg");
+        }
+
+        &--two {
+            background-image: url("../img/feature2.jpg");
+        }
+
+        &--three {
+            background-image: url("../img/feature3.jpg");
+        }
+
+        &--four {
+            background-image: url("../img/feature4.jpg");
+        }
+    }
+
+    &__content {
+        width: 50%;
+        padding: 45px 30px;
+        background-color: $light-color;
+    }
+
+    &__subtitle {
+        @include subtitle();
+        
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        line-height: 23px;
+    }
+
+    &__text {
+        @include text();
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: $middle-width) {
+    .about {
+        min-height: 873px;
+
+        &__item {
+            width: 100%;
+        }
+
+        &__content {
+            &--one,
+            &--three {
+                order: 2;
+            }
+
+            &--two,
+            &--four {
+                order: 1;
+            }
+        }
+
+        &__img {
+            &--one,
+            &--three {
+                order: 1;
+            }
+
+            &--two,
+            &--four {
+                order: 2;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .about {
+        &__content {
+            padding: 30px 20px;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .about {
+        min-height: 1450px;
+
+        &__item {
+            flex-direction: column;
+        }
+
+        &__img {
+            width: 100%;
+
+            &--two,
+            &--three,
+            &--four {
+                order: 1;
+            }
+
+        }
+
+        &__content {
+            width: 100%;
+
+            &--two,
+            &--three,
+            &--four {
+                order: 2;
+            }
+        }
+    }
+}

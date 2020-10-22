@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 18px;
+  line-height: 23px;
+  font-family: "Raleway", "Arial", sans-serif;
+  color: $dark-color;
+  background-color: $light-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  @include desktop-wrapper();
+}
+
+@media (max-width: $middle-width) {
+  .container {
+    @include middle-wrapper();
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .container {
+    @include tablet-wrapper();
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .container {
+    @include mobile-wrapper();
+  }
+}

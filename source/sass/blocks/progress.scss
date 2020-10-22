@@ -1,0 +1,130 @@
+.progress {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 130px;
+        padding-bottom: 120px;
+    }
+
+    &__header {
+        width: 100%;
+        max-width: 560px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+    &__title {
+        @include title();
+        padding-bottom: 10px;
+
+        & span {
+            font-weight: 900;
+        }
+    }
+
+    &__subtitle {
+        @include subtitle();
+    }
+
+
+    &__list {
+        @include list();
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    &__item {
+        position: relative;
+        width: calc(100%/4);
+        min-width: 230px;
+        padding-right: 30px;
+        padding-left: 100px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 70px;
+            height: 77px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        &:first-child::before {
+            background-image: url("../img/muffin.png");
+        }
+
+        &:nth-child(2)::before {
+            background-image: url("../img/cake.png");
+        }
+
+        &:nth-child(3)::before {
+            background-image: url("../img/cupcake.png");
+        }
+
+        &:nth-child(4) {
+            padding-right: 0;
+
+            &::before {
+                background-image: url("../img/daughnut.png");
+            }
+        }
+
+        &:nth-child(6) {
+            padding-right: 0;
+
+            &::before {
+                background-image: url("../img/vegetable.svg");
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    &__count {
+        @include title();
+        font-family: "Gilroy", sans-serif;
+        line-height: 1;
+        font-weight: 900;
+    }
+
+    &__product {
+       margin: 0;
+       font-family: "Raleway", Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 50px;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: $middle-width) {
+    .progress {
+        &__inner {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        &__list {
+            max-width: 620px;
+            justify-content: center;
+        }
+
+        &__item {
+            width: 40%;
+            padding-bottom: 30px;
+        }
+    }
+}
